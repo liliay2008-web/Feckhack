@@ -1,0 +1,749 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #app {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+  }
+
+  body {
+    @apply font-sans;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 15%, #f093fb 30%, #4facfe 50%, #00f2fe 70%, #667eea 85%, #764ba2 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 25s ease infinite;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.4) 0%, transparent 60%),
+      radial-gradient(circle at 80% 80%, rgba(240, 147, 251, 0.4) 0%, transparent 60%),
+      radial-gradient(circle at 40% 20%, rgba(79, 172, 254, 0.4) 0%, transparent 60%),
+      radial-gradient(circle at 60% 70%, rgba(139, 92, 246, 0.3) 0%, transparent 50%);
+    animation: pulse 10s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    25% {
+      background-position: 50% 0%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    75% {
+      background-position: 50% 100%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.85;
+      transform: scale(1.15);
+    }
+  }
+}
+
+@layer components {
+
+  /* Единые кнопки */
+  .btn-primary {
+    @apply bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-700 hover:from-purple-700 hover:via-indigo-700 hover:to-purple-800 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl active:scale-95 relative overflow-hidden;
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+    background-size: 200% auto;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+  .btn-primary:hover {
+    background-position: right center;
+    box-shadow: 0 12px 35px rgba(139, 92, 246, 0.6);
+  }
+
+  .btn-secondary {
+    @apply bg-white/90 backdrop-blur-sm hover:bg-white text-gray-dark font-semibold py-3 px-6 rounded-xl border-2 border-purple-200 hover:border-purple-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+  }
+
+  .btn-secondary:hover {
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.2);
+  }
+
+  /* Единые заголовки */
+  .page-title {
+    @apply text-4xl font-bold mb-2 animate-slide-up;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: gradient 3s linear infinite, slideUp 0.6s ease-out;
+  }
+
+  .page-subtitle {
+    @apply text-gray-600 text-lg animate-slide-up;
+    animation-delay: 0.1s;
+  }
+
+  /* Единые карточки секций */
+  .section-card {
+    @apply backdrop-blur-xl rounded-2xl shadow-xl p-6 transition-all duration-500 hover:shadow-2xl hover:scale-[1.01] border border-white/50 relative overflow-hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.6);
+    z-index: 1;
+  }
+
+  .section-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+  }
+
+  .section-card:hover::before {
+    left: 100%;
+  }
+
+  .section-card:hover {
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.9);
+    transform: translateY(-5px) scale(1.01);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+  }
+
+  /* Иконки секций */
+  .section-icon {
+    @apply p-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-110 hover:rotate-6;
+  }
+
+  .section-header {
+    @apply flex items-center space-x-3 mb-6;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-gray-dark;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-purple-200/50 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all duration-300 bg-white/90 backdrop-blur-sm hover:border-purple-400 hover:bg-white shadow-sm;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+  }
+
+  .input-field:focus {
+    box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2), 0 0 0 3px rgba(139, 92, 246, 0.1);
+    transform: translateY(-1px);
+  }
+
+  /* Единые карточки */
+  .card {
+    @apply backdrop-blur-xl rounded-2xl shadow-xl p-6 transition-all duration-500 hover:shadow-2xl hover:scale-[1.01] border border-white/50 relative overflow-hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.6);
+    z-index: 1;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+  }
+
+  .card:hover::before {
+    left: 100%;
+  }
+
+  .card:hover {
+    box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.9);
+    transform: translateY(-5px) scale(1.01);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.6s ease-out;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+}
+
+/* Расширенные анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.bounce-in {
+  animation: bounceIn 0.6s ease-out;
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Красивый скроллбар */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8B5CF6 0%, #7C3AED 100%);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7C3AED 0%, #6D28D9 100%);
+  background-clip: padding-box;
+}
+
+/* Эффект стеклянной морфологии для карточек */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Градиентные кнопки */
+.btn-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Анимация появления строк таблицы */
+@keyframes tableRow {
+  from {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.table-row {
+  animation: tableRow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
+}
+
+.table-row:hover {
+  transform: translateX(5px) scale(1.01);
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.05), rgba(99, 102, 241, 0.05));
+}
+
+/* Эффект наведения для карточек */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s;
+}
+
+.card-hover:hover::before {
+  left: 100%;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.03) rotate(0.5deg);
+  box-shadow: 0 25px 50px rgba(139, 92, 246, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Анимация загрузки */
+.loading-spinner {
+  border: 4px solid #f3f4f6;
+  border-top: 4px solid #8B5CF6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* Градиентный текст */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Плавные переходы между страницами */
+.page-transition-enter-active,
+.page-transition-leave-active {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-transition-enter-from {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+}
+
+.page-transition-leave-to {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+}
+
+/* Единые фильтры/табы */
+.filter-btn {
+  @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center space-x-2;
+}
+
+.filter-btn-active {
+  @apply bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+.filter-btn-inactive {
+  @apply bg-white/90 backdrop-blur-sm text-gray-dark border-2 border-purple-200 hover:border-purple-400;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+}
+
+.filter-btn-inactive:hover {
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.2);
+}
+
+/* Анимация появления элементов списка */
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.stagger-item {
+  animation: staggerFadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Улучшенные эффекты для навигации */
+.nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #8B5CF6, #6366F1);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 3px 3px 0 0;
+}
+
+.nav-item.active::after {
+  width: 80%;
+}
+
+/* Эффект свечения для активных элементов */
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #8B5CF6, #6366F1, #8B5CF6);
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.glow-effect:hover::before {
+  opacity: 0.6;
+}
+
+/* Плавная анимация для всех интерактивных элементов */
+* {
+  transition-property: transform, opacity, box-shadow, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Улучшенные тени для карточек */
+.card-shadow {
+  box-shadow:
+    0 4px 6px -1px rgba(139, 92, 246, 0.1),
+    0 2px 4px -1px rgba(139, 92, 246, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.card-shadow:hover {
+  box-shadow:
+    0 20px 25px -5px rgba(139, 92, 246, 0.2),
+    0 10px 10px -5px rgba(139, 92, 246, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Улучшенные таблицы - единый стиль */
+table {
+  @apply w-full rounded-xl overflow-hidden backdrop-blur-sm;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
+}
+
+table thead {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.95) 0%, rgba(99, 102, 241, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2);
+}
+
+table thead th {
+  @apply px-6 py-4 text-left text-sm font-bold text-white uppercase tracking-wider;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table tbody {
+  @apply bg-white/50;
+}
+
+table tbody tr {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+/* Отключаем декоративный элемент по умолчанию для всех таблиц */
+table tbody tr::before {
+  content: none;
+}
+
+/* Декоративный элемент только для специальных таблиц с классом .table-with-border */
+table.table-with-border tbody tr::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(180deg, #8B5CF6, #6366F1);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  border-radius: 0 4px 4px 0;
+}
+
+table.table-with-border tbody tr:hover::before {
+  transform: scaleY(1);
+}
+
+table tbody tr:hover {
+  background: rgba(139, 92, 246, 0.05);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+}
+
+table.table-with-border tbody tr:hover {
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.08) 0%, rgba(99, 102, 241, 0.08) 100%);
+  transform: translateX(2px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+}
+
+table tbody td {
+  @apply px-6 py-4 text-sm text-gray-700;
+}
+
+/* Статусные бейджи */
+.status-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold transition-all duration-300 transform hover:scale-110;
+}
+
+.status-free {
+  @apply bg-green-100 text-green-800 border-2 border-green-300;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.2);
+}
+
+.status-occupied {
+  @apply bg-orange-100 text-orange-800 border-2 border-orange-300;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.2);
+}
+
+.status-reserved {
+  @apply bg-yellow-100 text-yellow-800 border-2 border-yellow-300;
+  box-shadow: 0 2px 8px rgba(234, 179, 8, 0.2);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Пульсирующие элементы */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.8);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Эффект волны при клике */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  top: 50%;
+  left: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s;
+  pointer-events: none;
+}

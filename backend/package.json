@@ -1,0 +1,23 @@
+{
+    "name": "topics-distribution-backend",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "start": "node ./src/server.js",
+        "dev": "node ./src/server.js"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "csv-parse": "^5.5.6",
+        "dayjs": "^1.11.13",
+        "express": "^4.19.2",
+        "json2csv": "^6.0.0-alpha.2",
+        "jsonwebtoken": "^9.0.2",
+        "lowdb": "^7.0.1",
+        "multer": "^1.4.5-lts.1",
+        "pdfkit": "^0.15.0",
+        "xlsx": "^0.18.5"
+    }
+}

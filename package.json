@@ -1,0 +1,19 @@
+{
+  "name": "topic-distribution-system",
+  "version": "1.0.0",
+  "description": "Веб-система распределения тем курсовых и дипломных",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "stop:server": "cd backend && ./stop-server.sh",
+    "restart:server": "npm run stop:server && sleep 2 && npm run dev:backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

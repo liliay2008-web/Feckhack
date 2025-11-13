@@ -1,0 +1,972 @@
+{
+  "groups": [
+    {
+      "id": 1,
+      "name": "ЮР-204"
+    },
+    {
+      "id": 2,
+      "name": "ЮР-203"
+    },
+    {
+      "id": 3,
+      "name": "ИС-104"
+    },
+    {
+      "id": 4,
+      "name": "ТОР-201"
+    },
+    {
+      "id": 5,
+      "name": "БД-305"
+    },
+    {
+      "id": 6,
+      "name": "ИС-103"
+    },
+    {
+      "id": 7,
+      "name": "БД-201"
+    },
+    {
+      "id": 8,
+      "name": "ТОР-105"
+    },
+    {
+      "id": 9,
+      "name": "П-202"
+    },
+    {
+      "id": 10,
+      "name": "ИС-101"
+    },
+    {
+      "id": 11,
+      "name": "К-203"
+    },
+    {
+      "id": 12,
+      "name": "Б-102"
+    }
+  ],
+  "commissions": [
+    {
+      "id": 1,
+      "name": "ИСиТ"
+    },
+    {
+      "id": 2,
+      "name": "Прикладная математика"
+    },
+    {
+      "id": 3,
+      "name": "Экономика"
+    },
+    {
+      "id": 4,
+      "name": "Психология"
+    },
+    {
+      "id": 5,
+      "name": "Информатика"
+    },
+    {
+      "id": 6,
+      "name": "Лингвистика"
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "Информационные системы"
+    },
+    {
+      "id": 2,
+      "name": "Математика"
+    },
+    {
+      "id": 3,
+      "name": "Управление персоналом"
+    },
+    {
+      "id": 4,
+      "name": "Психология"
+    },
+    {
+      "id": 5,
+      "name": "Веб-разработка"
+    },
+    {
+      "id": 6,
+      "name": "Социальная инженерия"
+    },
+    {
+      "id": 7,
+      "name": "Иностранные языки"
+    },
+    {
+      "id": 8,
+      "name": "Инженерия доступности"
+    },
+    {
+      "id": 9,
+      "name": "Педагогика"
+    }
+  ],
+  "supervisors": [
+    {
+      "id": 1,
+      "full_name": "Иванов А.А.",
+      "phone": null
+    },
+    {
+      "id": 2,
+      "full_name": "Петрова Е.В.",
+      "phone": null
+    },
+    {
+      "id": 3,
+      "full_name": "Козлов Д.Р.",
+      "phone": null
+    },
+    {
+      "id": 4,
+      "full_name": "Лебедева Т.Н.",
+      "phone": null
+    },
+    {
+      "id": 5,
+      "full_name": "Смирнова О.С.",
+      "phone": null
+    },
+    {
+      "id": 6,
+      "full_name": "Козлова М.В.",
+      "phone": null
+    },
+    {
+      "id": 7,
+      "full_name": "Федорова А.П.",
+      "phone": null
+    },
+    {
+      "id": 8,
+      "full_name": "Андреева Лариса Васильевна",
+      "phone": null
+    }
+  ],
+  "students": [
+    {
+      "id": 24,
+      "full_name": "Попова Мария Сергеевна",
+      "phone": "89001002828",
+      "group_id": 1,
+      "group_name": "ЮР-204"
+    },
+    {
+      "id": 25,
+      "full_name": "Сидоров Артём Игоревич",
+      "phone": "89123456789",
+      "group_id": 6,
+      "group_name": "ИС-103"
+    },
+    {
+      "id": 26,
+      "full_name": "Козлова Екатерина Александровна",
+      "phone": "89211234567",
+      "group_id": 7,
+      "group_name": "БД-201"
+    },
+    {
+      "id": 27,
+      "full_name": "Иванов Михаил Петрович",
+      "phone": "89333333333",
+      "group_id": 8,
+      "group_name": "ТОР-105"
+    },
+    {
+      "id": 28,
+      "full_name": "Лебедева Анна Викторовна",
+      "phone": "89012345678",
+      "group_id": 9,
+      "group_name": "П-202"
+    },
+    {
+      "id": 29,
+      "full_name": "Петров Дмитрий Андреевич",
+      "phone": "89998887766",
+      "group_id": 10,
+      "group_name": "ИС-101"
+    },
+    {
+      "id": 30,
+      "full_name": "Николаева Ольга Сергеевна",
+      "phone": "89023456789",
+      "group_id": 11,
+      "group_name": "К-203"
+    },
+    {
+      "id": 31,
+      "full_name": "Соколов Владислав Алексеевич",
+      "phone": "89112223344",
+      "group_id": 12,
+      "group_name": "Б-102"
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "title": "Разработка мобильного приложения для студентов",
+      "description": null,
+      "commission_id": 1,
+      "subject_id": 1,
+      "supervisor_id": 1,
+      "work_type": "Курсовая работа",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 2,
+      "title": "Анализ алгоритмов машинного обучения",
+      "description": null,
+      "commission_id": 2,
+      "subject_id": 2,
+      "supervisor_id": 2,
+      "work_type": "Дипломная работа",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 3,
+      "title": "Оптимизация процессов в университетской библиотеке",
+      "description": null,
+      "commission_id": 3,
+      "subject_id": 3,
+      "supervisor_id": 3,
+      "work_type": "Курсовая работа",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 4,
+      "title": "Исследование влияния соцсетей на мотивацию студентов",
+      "description": null,
+      "commission_id": 4,
+      "subject_id": 4,
+      "supervisor_id": 4,
+      "work_type": "Реферат",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 5,
+      "title": "Создание сайта для поиска аудиторий",
+      "description": null,
+      "commission_id": 5,
+      "subject_id": 5,
+      "supervisor_id": null,
+      "work_type": "Проект",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 6,
+      "title": "Интерактивная 3D-карта кампуса с голосовым сопровождением на русском",
+      "description": null,
+      "commission_id": 5,
+      "subject_id": 5,
+      "supervisor_id": 5,
+      "work_type": "Дипломная работа",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 7,
+      "title": "Система маршрутизации для студентов с инвалидностью (включая тактильные указатели)",
+      "description": null,
+      "commission_id": 4,
+      "subject_id": 6,
+      "supervisor_id": 6,
+      "work_type": "Курсовая работа",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 8,
+      "title": "Разработка мультиязычного веб-приложения для иностранных студентов",
+      "description": null,
+      "commission_id": 6,
+      "subject_id": 7,
+      "supervisor_id": 7,
+      "work_type": "Проект",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 9,
+      "title": "Автоматизированная система оповещения о занятости аудиторий через Telegram",
+      "description": null,
+      "commission_id": 1,
+      "subject_id": 1,
+      "supervisor_id": 1,
+      "work_type": "Дипломная работа",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 10,
+      "title": "Анализ поведения пользователей в интерактивном навигаторе кампуса",
+      "description": null,
+      "commission_id": 4,
+      "subject_id": 4,
+      "supervisor_id": 4,
+      "work_type": "Исследование",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 11,
+      "title": "Веб-приложение для старост с панелью управления аудиториями и расписанием",
+      "description": null,
+      "commission_id": 5,
+      "subject_id": 5,
+      "supervisor_id": 5,
+      "work_type": "Проект",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 12,
+      "title": "Генерация оптимальных маршрутов от входа до аудитории с учётом времени",
+      "description": null,
+      "commission_id": 2,
+      "subject_id": 2,
+      "supervisor_id": 2,
+      "work_type": "Курсовая работа",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 13,
+      "title": "Приложение для слабовидящих: аудио-навигация + тактильные подсказки",
+      "description": null,
+      "commission_id": 5,
+      "subject_id": 8,
+      "supervisor_id": 5,
+      "work_type": "Дипломная работа",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 14,
+      "title": "Система регистрации студентов с двухфакторной аутентификацией",
+      "description": null,
+      "commission_id": 1,
+      "subject_id": 1,
+      "supervisor_id": 1,
+      "work_type": "Курсовая работа",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": null
+    },
+    {
+      "id": 15,
+      "title": "Онлайн-платформа для коллективной подготовки к экзаменам с анимацией",
+      "description": null,
+      "commission_id": 4,
+      "subject_id": 9,
+      "supervisor_id": 6,
+      "work_type": "Проект",
+      "reserved_by_group_id": null,
+      "reserved_at": null,
+      "assigned_student_id": 29
+    }
+  ],
+  "nextIds": {
+    "groups": 13,
+    "commissions": 7,
+    "subjects": 10,
+    "supervisors": 9,
+    "students": 32,
+    "topics": 16,
+    "users": 19,
+    "history": 28
+  },
+  "users": [
+    {
+      "id": 1,
+      "full_name": "Иванов Иван Иванович",
+      "email": "abdeslam490545@incurrencemail.ru",
+      "login": "ivanvaniv",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$Gy0ZSnoZN7IlAgwN0JUA9eJi52puEtnTWXFe.475dfQOYl.zWoVZa"
+    },
+    {
+      "id": 2,
+      "full_name": "фамилия отчество имя",
+      "email": "abdeslam490545@incurrencemail.ru",
+      "login": "eyuk6t",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$V83WfVvC.LiFgldP59v56OjrlC3NjtuFX3iI4ahX1mHzfI2DNLV6y"
+    },
+    {
+      "id": 3,
+      "full_name": "Карасина Валентина Вагиновна",
+      "email": "abdeslam490545@incurrencemail.ru",
+      "login": "chlenososka228",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$ycAD3VgxxZBf1P2fV3v1r.W1F9PM/GRyBAisf8pC0OaCb1nSKzi9C"
+    },
+    {
+      "id": 4,
+      "full_name": "Карасина Валентина Вагиновна",
+      "email": "hfghfghfghfg@incurrencemail.ru",
+      "login": "chlenosos",
+      "role": "starosta",
+      "groups": [
+        "Группа 2"
+      ],
+      "password_hash": "$2a$10$9nx/szHCJPvbKlpxaW4O4uSbJqQiifA3YOS32.1glvVpK5s3gcLXa"
+    },
+    {
+      "id": 5,
+      "full_name": "Иванов Иван Иванович",
+      "email": "hfghfghfghfg@incurrencemail.ru",
+      "login": "ivanvanivfsdfsdf",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$AJp2CwY83oCVbu5MrTOEtelaf7oTjUGsWpIVorIUppUPoz/08f6/S"
+    },
+    {
+      "id": 6,
+      "full_name": "Карасина Валентина Вагиновна",
+      "email": "hfghfghfghfg@incurrencemail.ru",
+      "login": "chlenososka228про",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$2xQcN/jxcboYT4LAeY7ge.BCRXoCQjyvh5nb8n77.VlLkLN0suuHy"
+    },
+    {
+      "id": 7,
+      "full_name": "имя фамилия отчество",
+      "email": "hfghfghfghfg@incurrencemail.ru",
+      "login": "eyuk6tывфыв",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$NUyTH3.SyS8W.efBVmc6ROIqmbZr5zNQ4RxaPxpTfy7.c.UNy6zya"
+    },
+    {
+      "id": 8,
+      "full_name": "Карасина Валентина Вагиновна",
+      "email": "hfghfghfghfg@incurrencemail.ru",
+      "login": "chlenososka228rasdf",
+      "role": "starosta",
+      "groups": [
+        "Группа 3"
+      ],
+      "password_hash": "$2a$10$2c6Y69/7qzVPdBodrXLQx.GJ4/5KLNK3TGbZkTGkVDlXalfZmqsze"
+    },
+    {
+      "id": 9,
+      "full_name": "Андреева Аня Сосиска",
+      "email": "osswdlqus@gmail.com",
+      "login": "anuaandreeva",
+      "role": "starosta",
+      "groups": [
+        "Группа 2"
+      ],
+      "password_hash": "$2a$10$YhoxZog8gIeQxS6gUf6wlexuKTvCF2XU77JX5/aWKbuJOfTD36SoK"
+    },
+    {
+      "id": 10,
+      "full_name": "Попова Анна Ивановна",
+      "email": "osswdlqusdfg@gmail.com",
+      "login": "etryh",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$p.NVNdJ1T4c.FKzjWKq6Weeov5JNAh14KpN2r4MrQWdBN12tieAH2"
+    },
+    {
+      "id": 11,
+      "full_name": "Иванов Иван Иванович",
+      "email": "ivanj@gmail.com",
+      "login": "wertyu",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$N5yguBk4rxMhjxl3XDDhsO8gJAx8YRGObvtK3RIy.XuR3O8sjMDgG"
+    },
+    {
+      "id": 12,
+      "full_name": "Карасина Валентина Вагиновна",
+      "email": "hfghfghfghfg@incurrencemail.ru",
+      "login": "chlenososka228fsdfs",
+      "role": "starosta",
+      "groups": [
+        "ИС-106"
+      ],
+      "password_hash": "$2a$10$gz1EHAl2jc19OCSL8M4UWuNSH.0gHvnHJecJ8c20YGpuHHqCZ7mOa"
+    },
+    {
+      "id": 13,
+      "full_name": "Карасина Валентина Вагиновна",
+      "email": "abdeslam490545@incurrencemail.ru",
+      "login": "chlenososka228dasda",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$UCLRcFH69FJvQffQ2xKbY.xq5RrAIHAkdjJ3LkoV8.YbrxxjKdmKi"
+    },
+    {
+      "id": 14,
+      "full_name": "Попова Анна Ивановна",
+      "email": "aniiipopova@gmail.com",
+      "login": "popovaanna",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$.UhGVKBn9WrzwXQA91G/UuGLZT/dw8VEkSWKSB4kVHTMu1oi90e6u"
+    },
+    {
+      "id": 15,
+      "full_name": "Иванова Ирина Сергеевна",
+      "email": "irinf@mail.ru",
+      "login": "irina",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$0e21Q.wyP.ASvQ4kEyih8OWU2TjP6iucpiNsQYIwaJz1nGDyigz1i"
+    },
+    {
+      "id": 16,
+      "full_name": "Андреева Аня Сосиска",
+      "email": "sosiska@mail.ru",
+      "login": "sosiska",
+      "role": "starosta",
+      "groups": [
+        "Б-201"
+      ],
+      "password_hash": "$2a$10$7NHZXIyGqWAM2ZIw.NWh0.MKW1Yk.ZMcp44qmYxQvb9DcDAtvl/Ea"
+    },
+    {
+      "id": 17,
+      "full_name": "Попова Анна Ивановна",
+      "email": "aniiipop@mail.ru",
+      "login": "pojknna",
+      "role": "admin",
+      "groups": null,
+      "password_hash": "$2a$10$mHkzOdW1.ahjMLLhDPj3bOTfz13WCJttBrJlOGcYF1zzN.LC1KY6q"
+    },
+    {
+      "id": 18,
+      "full_name": "Козлова Алиса Юрьевна",
+      "email": "alisa@mail.ru",
+      "login": "aliska",
+      "role": "starosta",
+      "groups": [
+        "ИС-101"
+      ],
+      "password_hash": "$2a$10$V5SPuUGE.nViZbt8AUBRtOC/NNQCFvot/qxIl22koc4Yd6Aa243Ua"
+    }
+  ],
+  "history": [
+    {
+      "id": 27,
+      "created_at": "2025-11-13T02:51:07.262Z",
+      "action": "Тема назначена студенту",
+      "entity_type": "topic",
+      "entity_id": 15,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "assigned_student_id": 29
+      }
+    },
+    {
+      "id": 26,
+      "created_at": "2025-11-13T02:49:25.246Z",
+      "action": "Загружено тем: 10",
+      "entity_type": "topic",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "imported": 10
+      }
+    },
+    {
+      "id": 25,
+      "created_at": "2025-11-13T02:49:00.662Z",
+      "action": "Загружено студентов: 8",
+      "entity_type": "student",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "imported": 8
+      }
+    },
+    {
+      "id": 24,
+      "created_at": "2025-11-13T02:44:43.877Z",
+      "action": "Очищены все студенты",
+      "entity_type": "student",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "cleared": true
+      }
+    },
+    {
+      "id": 23,
+      "created_at": "2025-11-13T02:44:37.112Z",
+      "action": "Загружено студентов: 8",
+      "entity_type": "student",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "imported": 8
+      }
+    },
+    {
+      "id": 22,
+      "created_at": "2025-11-13T00:58:18.888Z",
+      "action": "Авто-распределение для группы 5",
+      "entity_type": "distribution",
+      "entity_id": 5,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "assigned": 1
+      }
+    },
+    {
+      "id": 21,
+      "created_at": "2025-11-12T23:33:17.554Z",
+      "action": "Загружено студентов: 3",
+      "entity_type": "student",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "imported": 3
+      }
+    },
+    {
+      "id": 20,
+      "created_at": "2025-11-12T23:28:18.361Z",
+      "action": "Очищены все студенты",
+      "entity_type": "student",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "cleared": true
+      }
+    },
+    {
+      "id": 19,
+      "created_at": "2025-11-12T22:28:51.824Z",
+      "action": "Загружено студентов: 3",
+      "entity_type": "student",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "imported": 3
+      }
+    },
+    {
+      "id": 18,
+      "created_at": "2025-11-12T22:26:35.263Z",
+      "action": "Студент удалён",
+      "entity_type": "student",
+      "entity_id": 4,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "full_name": "Попова Мария Сергеевна",
+        "group_name": "ЮР-204"
+      }
+    },
+    {
+      "id": 17,
+      "created_at": "2025-11-12T22:26:27.394Z",
+      "action": "Студент удалён",
+      "entity_type": "student",
+      "entity_id": 8,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "full_name": "Коллесников Никита Юрьевич",
+        "group_name": "Юр-204"
+      }
+    },
+    {
+      "id": 16,
+      "created_at": "2025-11-12T22:26:24.861Z",
+      "action": "Студент удалён",
+      "entity_type": "student",
+      "entity_id": 5,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "full_name": "Коллесников Никита Юрьевич",
+        "group_name": "Юр-204"
+      }
+    },
+    {
+      "id": 15,
+      "created_at": "2025-11-12T22:26:24.860Z",
+      "action": "Назначение темы снято (удаление студента)",
+      "entity_type": "topic",
+      "entity_id": 5,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "assigned_student_id": null
+      }
+    },
+    {
+      "id": 14,
+      "created_at": "2025-11-12T22:26:22.015Z",
+      "action": "Студент удалён",
+      "entity_type": "student",
+      "entity_id": 9,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "full_name": "Иванов Степан Валерьевич",
+        "group_name": "ЮР-203"
+      }
+    },
+    {
+      "id": 13,
+      "created_at": "2025-11-12T22:26:19.350Z",
+      "action": "Студент удалён",
+      "entity_type": "student",
+      "entity_id": 6,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "full_name": "Иванов Степан Валерьевич",
+        "group_name": "ЮР-203"
+      }
+    },
+    {
+      "id": 12,
+      "created_at": "2025-11-12T22:26:19.348Z",
+      "action": "Назначение темы снято (удаление студента)",
+      "entity_type": "topic",
+      "entity_id": 4,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "assigned_student_id": null
+      }
+    },
+    {
+      "id": 11,
+      "created_at": "2025-11-12T22:26:11.430Z",
+      "action": "Загружено студентов: 3",
+      "entity_type": "student",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "imported": 3
+      }
+    },
+    {
+      "id": 10,
+      "created_at": "2025-11-12T21:55:55.520Z",
+      "action": "Тема назначена студенту",
+      "entity_type": "topic",
+      "entity_id": 5,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "assigned_student_id": 5
+      }
+    },
+    {
+      "id": 9,
+      "created_at": "2025-11-12T21:55:42.126Z",
+      "action": "Тема назначена студенту",
+      "entity_type": "topic",
+      "entity_id": 4,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "assigned_student_id": 6
+      }
+    },
+    {
+      "id": 8,
+      "created_at": "2025-11-12T21:54:30.087Z",
+      "action": "Изменён руководитель темы",
+      "entity_type": "topic",
+      "entity_id": 5,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "supervisor_id": null
+      }
+    },
+    {
+      "id": 7,
+      "created_at": "2025-11-12T21:54:25.122Z",
+      "action": "Изменён руководитель темы",
+      "entity_type": "topic",
+      "entity_id": 5,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "supervisor_id": null
+      }
+    },
+    {
+      "id": 6,
+      "created_at": "2025-11-12T21:53:25.982Z",
+      "action": "Загружено тем: 5",
+      "entity_type": "topic",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "imported": 5
+      }
+    },
+    {
+      "id": 5,
+      "created_at": "2025-11-12T21:53:11.634Z",
+      "action": "Загружено студентов: 3",
+      "entity_type": "student",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "imported": 3
+      }
+    },
+    {
+      "id": 4,
+      "created_at": "2025-11-12T16:14:54.428Z",
+      "action": "Студент удалён",
+      "entity_type": "student",
+      "entity_id": 1,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "full_name": "Попова Мария Сергеевна",
+        "group_name": "ЮР-204"
+      }
+    },
+    {
+      "id": 3,
+      "created_at": "2025-11-12T16:14:52.011Z",
+      "action": "Студент удалён",
+      "entity_type": "student",
+      "entity_id": 2,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "full_name": "Коллесников Никита Юрьевич",
+        "group_name": "Юр-204"
+      }
+    },
+    {
+      "id": 2,
+      "created_at": "2025-11-12T16:14:46.384Z",
+      "action": "Студент удалён",
+      "entity_type": "student",
+      "entity_id": 3,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "full_name": "Иванов Степан Валерьевич",
+        "group_name": "ЮР-203"
+      }
+    },
+    {
+      "id": 1,
+      "created_at": "2025-11-11T23:10:54.752Z",
+      "action": "Загружено студентов: 3",
+      "entity_type": "student",
+      "entity_id": null,
+      "user_id": null,
+      "user_name": "Система",
+      "user_role": null,
+      "old_value": null,
+      "new_value": {
+        "imported": 3
+      }
+    }
+  ]
+}
